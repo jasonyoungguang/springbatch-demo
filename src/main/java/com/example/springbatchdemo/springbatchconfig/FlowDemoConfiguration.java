@@ -15,7 +15,6 @@ import org.springframework.context.annotation.Configuration;
 //通篇看下来这里的flow的作用就是可以将step进行整合重复利用，进行多种组合然后进行变化
 //这里要注意的是我们的Flow创建不再是直接调用Spring的对象管理器中的buildFactory进行创建的，是我们自己new的new FlowBuilder<Flow>("");
 @Configuration
-@EnableBatchProcessing
 public class FlowDemoConfiguration {
 
     @Autowired
