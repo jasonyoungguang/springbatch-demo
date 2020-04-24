@@ -7,17 +7,18 @@ import org.springframework.batch.core.job.flow.JobExecutionDecider;
 
 //自定义decider
 public class MyDecider implements JobExecutionDecider {
-
-    private int count;
-
-    @Override
-    public FlowExecutionStatus decide(JobExecution jobExecution, StepExecution stepExecution) {
-        count++;
-        System.out.println("======================：" + count);
-        if (count % 2 == 0) {
-            return new FlowExecutionStatus("偶数");
-        } else {
-            return new FlowExecutionStatus("奇数");
-        }
-    }
+	
+	private int count;
+	
+	@Override
+	public FlowExecutionStatus decide(JobExecution jobExecution, StepExecution stepExecution) {
+		count++;
+		System.out.println("======================：" + count);
+		if (count % 2 == 0) {
+			
+			return new FlowExecutionStatus("偶数");
+		} else {
+			return new FlowExecutionStatus("奇数");
+		}
+	}
 }
